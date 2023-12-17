@@ -12,4 +12,10 @@ exec($shellPY . " " . $pythonScriptPath, $output);
 
 echo $shellPY . " <br> " . $output[0];
 
+$decode_outputs = json_decode($output[0], true);
+
+foreach ($decode_outputs as $decode_output) {
+	echo "<br>".$decode_output["a"]."<br>";
+}
+
 ?>
