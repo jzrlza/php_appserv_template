@@ -16,10 +16,11 @@ $decode_outputs = json_decode($output[0], true);
 //$keys = array_keys($decode_outputs);
 
 foreach ($decode_outputs as $decode_output) {
+	echo "<br>";
 	foreach ($decode_output as $key => $value) {
-		echo "<br>".$decode_output[$key]. " " . $value . " ";
+		echo $value . " ";
 	}
-	echo " ;<br>";
+	echo ";";
 }
 
 ?>
