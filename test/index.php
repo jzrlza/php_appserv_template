@@ -10,9 +10,11 @@ $pythonScriptPath = __DIR__ . '\pytest.py';  // Adjust the path accordingly
 // Use exec to run the Python script and capture its output
 exec($shellPY . " " . $pythonScriptPath, $output);
 
-echo $shellPY . " <br> " . $output[0];
+$result_array = $output[0];
 
-$decode_outputs = json_decode($output[0], true);
+echo $shellPY . " <br> " . $result_array;
+
+$decode_outputs = json_decode($result_array, true);
 //$keys = array_keys($decode_outputs);
 
 foreach ($decode_outputs as $decode_output) {
