@@ -1,6 +1,6 @@
 <?php
 
-$config = parse_ini_file( __DIR__ .'\config.ini', true);
+$config = parse_ini_file( dirname(__DIR__) .'\config.ini', true);
 
 $shellPY = $config['python']['pathw'];
 $phpScriptPath = __DIR__ . '\index.php';  // Adjust the path accordingly
